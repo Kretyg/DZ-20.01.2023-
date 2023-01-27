@@ -1,15 +1,12 @@
 ﻿// Подсчитать сумму цифр в числе
-
-int number = new Random().Next(1, 100000);
+Console.WriteLine("Введите число:");
+int number = int.Parse(Console.ReadLine()!);
 int sumN = 0;
-Console.Write($"Сумма цифр числа {number} равна ");
 
-while (number > 0)
+for (int i = 0; number > 0; i++)
 {
     int n = number % 10;
     sumN = sumN + n;
     number = number / 10;
 }
-
 Console.WriteLine(sumN);
-Console.WriteLine();
